@@ -2,7 +2,11 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
+            // Way to do asynchronous programming in javascript by using the setTimeout
+            // If we set 0 then we will wait until the entire loop is complete
+            // If we change var to let in for loop then i will exist outside the for loop
+            // It becomes a global variable and we can access it using the timeout function
+            for (let i = 0; i < 5; i++) {
                 // setTimeout executes the function after 5 ms
                 setTimeout(function() {
                     console.log(i);

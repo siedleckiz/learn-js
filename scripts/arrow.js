@@ -1,10 +1,11 @@
+// this.firstname = 'Jane';
 const o = {
     msg: 'An object',
     person: {
         firstName: 'Grace',
         lastName: 'Hopper',
         age: 89,
-        fullName: () => { return this.firstName + ' ' + this.lastName }
+        fullName: function() { return this.firstName + ' ' + this.lastName }
     }
 }
 
