@@ -6,8 +6,16 @@ const originalMatrix = [
   ];
   
   const newMatrix = originalMatrix.map((row) => {
-    return row.sort();
+    return Array.from(row).sort();
+    //return [...row].sort();
   });
+
+  //Returning a copy to reference of the matrix
+  //Each row is a reference to the original matrix
+  //So we have two instances of the matrix an original copy and a new copy
+  //Both point to the same object in the memory
+  //Can modify by making a new array that is not a copy
+
   
   // Modifying the original matrix (changing the last element of the first row)
   originalMatrix[0][2] = 99;
